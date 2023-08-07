@@ -16,7 +16,6 @@ const Formulario = () => {
       const dato = await respuesta.json();
       setNoticias(dato);
       setMostrarNoticias(true);
-      console.log(noticias);
     } catch (error) {
       console.log(error);
     }
@@ -33,9 +32,9 @@ const Formulario = () => {
       <Container className="text-center">
         <Form className="row" onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="tarea">
-            <Form.Label className="my-3">Seleccione su pais</Form.Label>
+            <Form.Label className="my-3"></Form.Label>
             <Form.Select onChange={(e) => setPais(e.target.value)} value={pais}>
-              <option value="">Seleccionar pais</option>
+              <option value="">Elegir un pais</option>
               <option value="de">Alemania</option>
               <option value="ar">Argentina</option>
               <option value="br">Brasil</option>
@@ -45,14 +44,12 @@ const Formulario = () => {
               <option value="mx">Mexico</option>
               <option value="jp">Japon</option>
             </Form.Select>
-            <Form.Label className="my-3">
-              Ingrese una categoria de noticias:
-            </Form.Label>
+            <Form.Label className="my-3"></Form.Label>
             <Form.Select
               onChange={(e) => setCategoria(e.target.value)}
               value={categoria}
             >
-              <option>Elige que tipo de noticia te interesa</option>
+              <option>Elige una noticia</option>
               <option value="business">Negocios</option>
               <option value="entertainment">Entretenimiento</option>
               <option value="world">Globales</option>
@@ -62,7 +59,7 @@ const Formulario = () => {
               <option value="technology">Tecnologia</option>
             </Form.Select>
             <Container className="my-3 text-center">
-              <Button variant="success" type="submit">
+              <Button variant="dark" type="submit">
                 Buscar
               </Button>
             </Container>
