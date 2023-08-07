@@ -1,0 +1,10 @@
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url("https://images.pexels.com/photos/518543/pexels-photo-518543.jpeg?auto=compress&cs=tinysrgb&w=1500&h=800&dpr=2");
+}
+
+.mainPage {
+  flex-grow: 1;
+}
